@@ -1,0 +1,45 @@
+{
+  "name": "eaquemolestiae",
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "schemas/*",
+    "utils/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "build:lib": "turbo run build --filter=@validest/* --filter=validest",
+    "build:doc": "turbo run build --filter=documentation",
+    "publish:lib": "turbo run publish:lib --filter=@validest/* --filter=validest",
+    "dev:doc": "turbo run dev --filter=documentation",
+    "dev": "turbo run dev --parallel",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch --filter=validest",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "latest",
+    "turbo": "latest",
+    "turboversion": "^0.1.0",
+    "validest": "*"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120
+  },
+  "packageManager": "yarn@1.22.5",
+  "author": "JenningsHeaney",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarleyTerry/eaquemolestiae.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MarleyTerry/eaquemolestiae.git/issues"
+  }
+}
